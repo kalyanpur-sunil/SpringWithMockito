@@ -63,6 +63,12 @@
 			<version>1.0.0</version>
 		</dependency>
 		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
 			<version>${jstl.version}</version>
@@ -84,8 +90,8 @@
 			<artifactId>spring-test</artifactId>
 			<version>${spring.test.version}</version>
 		</dependency>
-		
-		
+
+
 
 	</dependencies>
 
@@ -111,6 +117,8 @@
 					<includes>
 						<include>**/*Tests.java</include>
 					</includes>
+					<forkMode>always</forkMode>
+					<verbose>true</verbose>
 				</configuration>
 			</plugin>
 			<plugin>
